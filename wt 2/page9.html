@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Shipping Address</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #f4f4f4; /* Light grey background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .address-container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 90%;
+            max-width: 400px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .back-button {
+            font-size: 1.5em;
+            color: #558b2f; /* Medium green */
+            cursor: pointer;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            font-size: 1.5em;
+            margin-right: 5px;
+            color: #689f38; /* Green */
+        }
+
+        .logo-text {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .actions {
+            display: flex;
+            gap: 15px;
+            font-size: 1.3em;
+            color: #558b2f;
+        }
+
+        .address-title-section {
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .address-title {
+            font-size: 1.3em;
+            color: #333;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+
+        .address-form {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.8em;
+            color: #777;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            padding: 8px 0;
+            font-size: 1em;
+            color: #333;
+            width: 100%;
+            outline: none;
+        }
+
+        .form-group input::placeholder {
+            color: #ccc;
+        }
+
+        .form-group.full-width input {
+            width: 100%;
+        }
+
+        .bottom-action {
+            background-color: black;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Placeholder for icons */
+        .icon {
+            font-size: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="address-container">
+        <div class="header">
+            <div class="back-button">←</div>
+            <div class="logo-container">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">Greenify</span>
+            </div>
+            <div class="actions">
+                <span class="icon">🔍</span>
+                <span class="icon">🛒</span>
+            </div>
+        </div>
+
+        <div class="address-title-section">
+            <h2 class="address-title">ADD SHIPPING ADDRESS</h2>
+        </div>
+
+        <form class="address-form">
+            <div class="form-group">
+                <div>
+                    <label for="firstName">First name</label>
+                    <input type="text" id="firstName" placeholder="Enter first name">
+                </div>
+                <div>
+                    <label for="lastName">Last name</label>
+                    <input type="text" id="lastName" placeholder="Enter last name">
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="address">Adress</label>
+                <input type="text" id="address" placeholder="Enter your street address">
+            </div>
+
+            <div class="form-group full-width">
+                <label for="city">City</label>
+                <input type="text" id="city" placeholder="Enter your city">
+            </div>
+
+            <div class="form-group">
+                <div>
+                    <label for="state">State</label>
+                    <input type="text" id="state" placeholder="Enter your state">
+                </div>
+                <div>
+                    <label for="zipCode">ZIP code</label>
+                    <input type="text" id="zipCode" placeholder="Enter your zip code">
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="phoneNumber">Phone number</label>
+                <input type="tel" id="phoneNumber" placeholder="Enter your phone number">
+            </div>
+        </form>
+
+        <div class="bottom-action">
+            ADD NOW
+        </div>
+    </div>
+</body>
+</html>

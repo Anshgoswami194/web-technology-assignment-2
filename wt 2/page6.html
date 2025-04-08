@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenify - Sustainable Products</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #f4f4f4; /* Light grey background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .app-container {
+            background: linear-gradient(to bottom, #e0f7fa 0%, #c8e6c9 100%); /* Light blue to light green gradient */
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 90%;
+            max-width: 450px;
+            margin: 20px;
+        }
+
+        .header {
+            background-color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hamburger {
+            font-size: 1.5em;
+            color: #558b2f; /* Medium green */
+            cursor: pointer;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            color: #689f38; /* Green */
+        }
+
+        .logo-icon {
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 15px;
+            font-size: 1.3em;
+            color: #558b2f;
+        }
+
+        .product-section {
+            padding: 20px;
+            background-color: #f9fbe7; /* Light yellow-green */
+            border-radius: 15px;
+            margin: 15px;
+        }
+
+        .product-section h2 {
+            color: #388e3c; /* Darker green */
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .product-image-container {
+            height: 120px;
+            overflow: hidden;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .product-title {
+            font-size: 0.9em;
+            color: #333;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .product-price {
+            font-size: 0.8em;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        .buy-button {
+            background-color: #8bc34a; /* Light green */
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .buy-button:hover {
+            background-color: #689f38; /* Darker green */
+        }
+
+        .blog-section {
+            padding: 20px;
+            background-color: #e8f5e9; /* Very light green */
+            border-radius: 15px;
+            margin: 15px;
+        }
+
+        .blog-section h2 {
+            color: #388e3c; /* Darker green */
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .blog-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-image-container {
+            height: 100px;
+            overflow: hidden;
+            border-bottom: 1px solid #eee;
+        }
+
+        .blog-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .blog-info {
+            padding: 10px;
+        }
+
+        .blog-title {
+            font-size: 0.9em;
+            color: #333;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .read-more {
+            display: block;
+            color: #558b2f; /* Medium green */
+            font-size: 0.8em;
+            text-decoration: none;
+            margin-top: 8px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .read-more:hover {
+            color: #388e3c; /* Darker green */
+            text-decoration: underline;
+        }
+
+        /* Placeholder for icons - you might want to use an icon font library */
+        .icon {
+            font-size: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <div class="hamburger">☰</div>
+            <div class="logo-container">
+                <span class="logo-icon">🌿</span>
+                <span class="logo">Greenify</span>
+            </div>
+            <div class="actions">
+                <span class="icon">🔍</span>
+                <span class="icon">🛒</span>
+            </div>
+        </div>
+
+        <div class="product-section">
+            <h2>Our Best-Selling Sustainable Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="organic-cotton-bag.jpg" alt="Organic Cotton Tote Bag">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Organic cotton tote bag</h3>
+                        <p class="product-price">99 Rs.</p>
+                        <button class="buy-button">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="hemp-backpack.jpg" alt="Hemp Backpack">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Hemp backpack</h3>
+                        <p class="product-price">999 Rs.</p>
+                        <button class="buy-button">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="organic-cotton-tshirts.jpg" alt="Organic Cotton T-shirts">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Organic cotton T-shirts</h3>
+                        <p class="product-price">499 Rs.</p>
+                        <button class="buy-button">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="bamboo-toothbrush.jpg" alt="Bamboo Toothbrush">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Bamboo toothbrush</h3>
+                        <p class="product-price">39 Rs.</p>
+                        <button class="buy-button">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="bamboo-pens-pencils.jpg" alt="Bamboo Pens and Pencils">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Bamboo pens and pencils</h3>
+                        <p class="product-price">99 Rs.</p>
+                        <button class="buy-button">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="jute-grocery-bag.jpg" alt="Jute Grocery Bag">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Jute grocery bag</h3>
+                        <p class="product-price">199 Rs.</p>
+                        <button class="buy-button">BUY NOW</button>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="buy-button" style="width: 150px;">EXPLORE MORE</button>
+            </div>
+        </div>
+
+        <div class="blog-section">
+            <h2>Blogs</h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image-container">
+                        <img src="sustainable-living-blog.jpg" alt="Embracing Sustainability">
+                    </div>
+                    <div class="blog-info">
+                        <h3 class="blog-title">Embracing Sustainability</h3>
+                        <p style="font-size: 0.8em; color: #777; margin-bottom: 5px;">The Power of Eco-Friendly Products in Everyday Life</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image-container">
+                        <img src="eco-conscious-home.jpg" alt="Sustainable Living Made Simple">
+                    </div>
+                    <div class="blog-info">
+                        <h3 class="blog-title">Sustainable Living Made Simple</h3>
+                        <p style="font-size: 0.8em; color: #777; margin-bottom: 5px;">Small Changes That Make a Difference</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image-container">
+                        <img src="eco-friendly-shopping.jpg" alt="Greenify's Guide to Eco-Friendly Shopping">
+                    </div>
+                    <div class="blog-info">
+                        <h3 class="blog-title">Greenify's Guide to Eco-Friendly Shopping</h3>
+                        <p style="font-size: 0.8em; color: #777; margin-bottom: 5px;">Your Roadmap to Conscious Consumerism</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Method</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #f4f4f4; /* Light grey background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .payment-container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 90%;
+            max-width: 400px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .back-button {
+            font-size: 1.5em;
+            color: #558b2f; /* Medium green */
+            cursor: pointer;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            font-size: 1.5em;
+            margin-right: 5px;
+            color: #689f38; /* Green */
+        }
+
+        .logo-text {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .actions {
+            display: flex;
+            gap: 15px;
+            font-size: 1.3em;
+            color: #558b2f;
+        }
+
+        .payment-title-section {
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .payment-title {
+            font-size: 1.3em;
+            color: #333;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+
+        .card-options {
+            padding: 20px;
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+
+        .card-preview {
+            min-width: 250px;
+            height: 150px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 15px;
+            color: white;
+            font-size: 0.9em;
+            flex-shrink: 0;
+        }
+
+        .card-preview.mastercard {
+            background: linear-gradient(135deg, #f79533 0%, #f37055 50%, #ef4e7b 100%);
+        }
+
+        .card-preview.visa {
+            background: linear-gradient(135deg, #4364f7 0%, #6fb1fc 100%);
+        }
+
+        .card-preview.amex {
+            background: #0078cf;
+        }
+
+        .card-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .card-number {
+            font-size: 1.1em;
+            letter-spacing: 0.1em;
+        }
+
+        .expiry {
+            font-size: 0.8em;
+        }
+
+        .payment-form {
+            padding: 0 20px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.8em;
+            color: #777;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            padding: 8px 0;
+            font-size: 1em;
+            color: #333;
+            width: 100%;
+            outline: none;
+        }
+
+        .form-group input::placeholder {
+            color: #ccc;
+        }
+
+        .form-group.full-width input {
+            width: 100%;
+        }
+
+        .bottom-action {
+            background-color: black;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Placeholder for icons and logos */
+        .icon {
+            font-size: inherit;
+        }
+
+        .card-logo {
+            width: 40px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <div class="header">
+            <div class="back-button">←</div>
+            <div class="logo-container">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">Greenify</span>
+            </div>
+            <div class="actions">
+                <span class="icon">🔍</span>
+                <span class="icon">🛒</span>
+            </div>
+        </div>
+
+        <div class="payment-title-section">
+            <h2 class="payment-title">PAYMENT METHOD</h2>
+        </div>
+
+        <div class="card-options">
+            <div class="card-preview mastercard">
+                <div>Iris Watson</div>
+                <div class="card-details">
+                    <span class="card-number">2365 3654 2365 3698</span>
+                    <span class="expiry">03/25</span>
+                </div>
+                <img src="mastercard-logo.png" alt="Mastercard" class="card-logo" style="align-self: flex-end;">
+            </div>
+            <div class="card-preview visa" style="opacity: 0.6;">
+                <div>...</div>
+                <div class="card-details">
+                    <span class="card-number">**** **** **** ****</span>
+                    <span class="expiry">**/**</span>
+                </div>
+                <img src="visa-logo.png" alt="Visa" class="card-logo" style="align-self: flex-end;">
+            </div>
+            <div class="card-preview amex" style="opacity: 0.6;">
+                <div>...</div>
+                <div class="card-details">
+                    <span class="card-number">**** ****** *****</span>
+                    <span class="expiry">**/**</span>
+                </div>
+                <img src="amex-logo.png" alt="American Express" class="card-logo" style="align-self: flex-end;">
+            </div>
+        </div>
+
+        <form class="payment-form">
+            <div class="form-group full-width">
+                <label for="nameOnCard">Name On Card</label>
+                <input type="text" id="nameOnCard" placeholder="Enter name on card">
+            </div>
+            <div class="form-group full-width">
+                <label for="cardNumber">Card Number</label>
+                <input type="number" id="cardNumber" placeholder="Enter card number">
+            </div>
+            <div class="form-group">
+                <div>
+                    <label for="expMonth">Exp Month</label>
+                    <input type="number" id="expMonth" placeholder="MM" min="1" max="12">
+                </div>
+                <div>
+                    <label for="expDate">Exp Date</label>
+                    <input type="number" id="expDate" placeholder="YY" min="23" max="35">
+                </div>
+            </div>
+            <div class="form-group full-width">
+                <label for="cvv">CVV</label>
+                <input type="number" id="cvv" placeholder="Enter CVV" maxlength="4">
+            </div>
+        </form>
+
+        <div class="bottom-action">
+            ADD CARD
+        </div>
+    </div>
+</body>
+</html>

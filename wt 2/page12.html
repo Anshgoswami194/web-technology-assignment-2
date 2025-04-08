@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .modal {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            text-align: center;
+            width: 90%;
+            max-width: 350px;
+            position: relative;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.2em;
+            color: #777;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        .payment-success-title {
+            font-size: 1.2em;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 0.1em;
+        }
+
+        .success-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #8bc34a; /* Light green */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+        }
+
+        .check-mark {
+            font-size: 2em;
+            color: #8bc34a;
+        }
+
+        .success-message {
+            color: #555;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+
+        .payment-id {
+            color: #777;
+            font-size: 0.8em;
+            margin-bottom: 20px;
+        }
+
+        .rate-text {
+            color: #333;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .rating-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .rating-icon {
+            font-size: 1.5em;
+            color: #ffc107; /* Yellow for smiley faces */
+            cursor: pointer;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .submit-button,
+        .back-home-button {
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .submit-button {
+            background-color: black;
+            color: white;
+        }
+
+        .back-home-button {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .submit-button:hover,
+        .back-home-button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="modal">
+        <button class="close-button">×</button>
+        <h2 class="payment-success-title">PAYMENT SUCCESS</h2>
+        <div class="success-icon">
+            <span class="check-mark">✔</span>
+        </div>
+        <p class="success-message">Your payment was success</p>
+        <p class="payment-id">Payment ID 15263541</p>
+        <p class="rate-text">Rate your purchase</p>
+        <div class="rating-icons">
+            <span class="rating-icon">😊</span>
+            <span class="rating-icon">😐</span>
+            <span class="rating-icon">🙁</span>
+        </div>
+        <div class="buttons-container">
+            <button class="submit-button">SUBMIT</button>
+            <button class="back-home-button">BACK TO HOME</button>
+        </div>
+    </div>
+</body>
+</html>

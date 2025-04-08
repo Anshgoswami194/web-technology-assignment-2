@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycling Awareness</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #87CEFA, #FFFFFF);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 375px; /* iPhone screen width */
+    height: 812px; /* iPhone screen height */
+    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hummingbird {
+    width: 60px; /* Adjust size as needed */
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    animation: fly 3s infinite alternate;
+}
+
+.recycle-icon {
+    margin: 20px 0;
+}
+
+.recycle-icon img {
+    width: 100px; /* Adjust size as needed */
+}
+
+h1 {
+    font-size: 24px;
+    margin: 20px 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fly {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <img src="path/to/hummingbird.png" alt="Hummingbird" class="hummingbird">
+            <div class="recycle-icon">
+                <img src="path/to/recycle-icon.png" alt="Recycle Symbol">
+            </div>
+            <h1>It's not too late..</h1>
+        </div>
+    </div>
+</body>
+</html>

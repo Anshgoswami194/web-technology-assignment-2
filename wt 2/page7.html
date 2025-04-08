@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Cotton T-shirt</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #f4f4f4; /* Light grey background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .product-container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 90%;
+            max-width: 400px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-image-section {
+            background-color: #f9f9f9; /* Light grey for image background */
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .product-image {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+            object-fit: cover;
+            max-height: 300px; /* Adjust as needed */
+        }
+
+        .product-details {
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            color: #777;
+            font-size: 0.9em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .size-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .size-button {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 8px 15px;
+            font-size: 0.9em;
+            color: #555;
+            cursor: pointer;
+            transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .size-button.selected {
+            border-color: #8bc34a; /* Light green */
+            color: #333;
+            font-weight: bold;
+        }
+
+        .size-button:hover {
+            border-color: #8bc34a; /* Light green */
+            color: #333;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .quantity-label {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quantity-button {
+            background-color: #f0f0f0;
+            color: #555;
+            border: none;
+            border-radius: 5px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .quantity-button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .quantity-display {
+            font-size: 1em;
+            color: #333;
+            width: 25px;
+            text-align: center;
+        }
+
+        .purchase-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 1.5em;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .add-to-cart-button {
+            background-color: #8bc34a; /* Light green */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .add-to-cart-button:hover {
+            background-color: #689f38; /* Darker green */
+        }
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <div class="product-image-section">
+            <img src="organic-cotton-tshirts.jpg" alt="Organic Cotton T-shirts" class="product-image">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Organic Cotton T-shirt</h1>
+            <p class="product-description">Indulge in eco-friendly comfort with our Organic Cotton T-shirts. Crafted from 100% organic cotton, these soft and breathable shirts are gentle.</p>
+            <div class="size-selector">
+                <button class="size-button">M</button>
+                <button class="size-button selected">L</button>
+                <button class="size-button">XL</button>
+            </div>
+            <div class="quantity-selector">
+                <span class="quantity-label">Quantity</span>
+                <div class="quantity-controls">
+                    <button class="quantity-button">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-button">+</button>
+                </div>
+            </div>
+            <div class="purchase-actions">
+                <span class="price">Rs.499</span>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const sizeButtons = document.querySelectorAll('.size-button');
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                sizeButtons.forEach(btn => btn.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+
+        const quantityIncrementButton = document.querySelector('.quantity-controls .quantity-button:last-child');
+        const quantityDecrementButton = document.querySelector('.quantity-controls .quantity-button:first-child');
+        const quantityDisplay = document.querySelector('.quantity-display');
+        let quantity = parseInt(quantityDisplay.textContent);
+
+        quantityIncrementButton.addEventListener('click', () => {
+            quantity++;
+            quantityDisplay.textContent = quantity;
+        });
+
+        quantityDecrementButton.addEventListener('click', () => {
+            if (quantity > 1) {
+                quantity--;
+                quantityDisplay.textContent = quantity;
+            }
+        });
+    </script>
+</body>
+</html>

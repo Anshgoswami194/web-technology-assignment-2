@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenify - Your Sustainable Shopping Destination</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #e0f7fa; /* Light blue background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('your-background-image.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white container */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 3em;
+            color: #689f38; /* Green color */
+            margin-bottom: 20px;
+        }
+
+        .hero-text {
+            margin-bottom: 30px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5em;
+            color: #2e7d32; /* Darker green */
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-text p {
+            font-size: 1.5em;
+            color: #558b2f; /* Medium green */
+            margin-bottom: 15px;
+        }
+
+        .shop-now-button {
+            background: linear-gradient(to right, #66bb6a, #aed581); /* Green gradient button */
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .shop-now-button:hover {
+            background: linear-gradient(to right, #4caf50, #9ccc65); /* Darker green on hover */
+            transform: translateY(-2px);
+        }
+
+        .why-choose {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .why-choose h2 {
+            color: #388e3c; /* Another shade of green */
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .feature img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        .feature h3 {
+            font-size: 1em;
+            color: #43a047; /* Light dark green */
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .feature p {
+            font-size: 0.8em;
+            color: #777;
+        }
+
+        /* Placeholder for the recycle logo - you'll need to use an actual image or an icon font */
+        .recycle-logo {
+            font-size: 4em;
+            color: #689f38;
+            margin-bottom: 10px;
+        }
+
+        .bird-icon {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 2em;
+            color: #777;
+            opacity: 0.6;
+            /* You might need to use an actual bird icon image or a font icon */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            .hero-text h1 {
+                font-size: 2em;
+            }
+
+            .hero-text p {
+                font-size: 1.2em;
+            }
+
+            .shop-now-button {
+                font-size: 1em;
+                padding: 10px 25px;
+            }
+
+            .why-choose h2 {
+                font-size: 1.5em;
+            }
+
+            .features {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 15px;
+            }
+
+            .feature img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .feature h3 {
+                font-size: 0.9em;
+            }
+
+            .feature p {
+                font-size: 0.7em;
+            }
+
+            .recycle-logo {
+                font-size: 3em;
+            }
+
+            .bird-icon {
+                font-size: 1.5em;
+                top: 15px;
+                left: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bird-icon">🕊️</div> <div class="recycle-logo">♻</div> <div class="hero-text">
+            <h1>Welcome to Greenify</h1>
+            <p>Your Sustainable</p>
+            <p style="color: #388e3c; font-weight: bold;">Shopping</p>
+            <p>Destination</p>
+        </div>
+        <button class="shop-now-button">SHOP NOW</button>
+        <div class="why-choose">
+            <h2>Why Choose Greenify?</h2>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <img src="sustainable-icon.png" alt="Sustainable Products"> <h3>Sustainable Products</h3>
+                <p>Curated selection of eco-friendly and ethically sourced products.</p>
+            </div>
+            <div class="feature">
+                <img src="eco-friendly-icon.png" alt="Eco-Friendly Choices"> <h3>Eco-Friendly Choices</h3>
+                <p>Make conscious decisions for a healthier planet without compromising style.</p>
+            </div>
+            <div class="feature">
+                <img src="quality-icon.png" alt="High-Quality Selection"> <h3>High-Quality Selection</h3>
+                <p>Durable and long-lasting products that reduce waste and promote sustainability.</p>
+            </div>
+            <div class="feature">
+                <img src="packaging-icon.png" alt="Sustainable Packaging"> <h3>Sustainable Packaging</h3>
+                <p>We prioritize minimal and recyclable packaging to reduce our environmental footprint.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
